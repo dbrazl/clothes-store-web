@@ -7,3 +7,9 @@ test('should have a top bar', () => {
   const topBar = screen.getByTestId('top-bar')
   expect(topBar).toBeInTheDocument()
 })
+
+test('should have a header', () => {
+  render(<Home />)
+  const topBar = screen.getByTestId('header')
+  expect(topBar).toBeInTheDocument()
+})
