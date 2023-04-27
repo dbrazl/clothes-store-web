@@ -4,7 +4,7 @@ import { BigText, Container } from './styles'
 
 function TopBar (): JSX.Element {
   return (
-    <Container>
+    <Container data-testid="top-bar">
       <BigText>
         BAZAR
         <strong>ATÉ 50% OFF</strong>
