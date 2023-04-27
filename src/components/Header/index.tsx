@@ -7,9 +7,9 @@ import { Categories, Category, Container, Logo, SandwichButton } from './styles'
 function Header (): JSX.Element {
   return (
     <Container data-testid="header">
-      <Logo src={logo} />
+      <Logo src={logo} data-testid="logo" />
 
-      <Categories>
+      <Categories data-testid="categories-nav">
         <Category>Novidades</Category>
         <Category>Roupas</Category>
         <Category>Calçados</Category>
@@ -19,7 +19,7 @@ function Header (): JSX.Element {
         <Category highlight>Bazar até 50%</Category>
       </Categories>
 
-      <SandwichButton>
+      <SandwichButton data-testid="mobile-menu-button">
         <CgMenuRight size={25} color='black' />
       </SandwichButton>
     </Container>
