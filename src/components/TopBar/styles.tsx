@@ -14,8 +14,4 @@ export const BigText = styled.p`
   font-size: 18px;
   text-transform: uppercase;
   color: #9F2B5E;
-
-  strong {
-    margin-left: 5px;
-  }
 `

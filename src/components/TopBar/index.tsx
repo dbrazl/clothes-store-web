@@ -6,7 +6,7 @@ function TopBar (): JSX.Element {
   return (
     <Container data-testid="top-bar">
       <BigText>
-        BAZAR
+        BAZAR&nbsp;
         <strong>ATÉ 50% OFF</strong>
       </BigText>
     </Container>
