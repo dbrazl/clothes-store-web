@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-function App() {
+function App (): JSX.Element {
   return (
     <div data-testid="app">
       App
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
