@@ -10,6 +10,12 @@ test('should have a top bar', () => {
 
 test('should have a header', () => {
   render(<Home />)
-  const topBar = screen.getByTestId('header')
-  expect(topBar).toBeInTheDocument()
+  const header = screen.getByTestId('header')
+  expect(header).toBeInTheDocument()
+})
+
+test('should have a carousel', () => {
+  render(<Home />)
+  const carouselItem = screen.getAllByTestId('carousel-item')
+  expect(carouselItem.length).toBeGreaterThan(0)
 })
