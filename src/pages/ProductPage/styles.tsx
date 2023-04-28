@@ -18,6 +18,10 @@ export const Photo = styled.img`
   width: 100%;
   height: 500px;
   object-fit: contain;
+
+  @media (min-width: 1024px) {
+    height: 700px;
+  }
 `
 
 export const ProductInfo = styled.div`
