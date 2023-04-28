@@ -51,7 +51,7 @@ export const Photo = styled.img`
 
 export const Category = styled.p`
   margin-top: 20px;
-  font-size: 10px;
+  font-size: 12px;
   color: #808080;
 `
 

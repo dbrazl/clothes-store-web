@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
+import { useQuery } from 'react-query'
 
 import { Device, useDevice } from 'hooks/useDevice'
 import api from 'services/api'
@@ -12,11 +13,13 @@ import Shelf from 'components/Shelf'
 
 import { type IProduct } from 'models/Shelf'
 
-// import { Container } from './styles'
-
 function Catalog (): JSX.Element {
-  const [products, setProducts] = useState<IProduct[][]>([[]])
   const { device } = useDevice()
+
+  const { data } = useQuery({
+    queryKey: ['products', device],
+    queryFn: getProducts
+  })
 
   function splitToChunks (array: IProduct[], parts: number): IProduct[][] {
     const result: IProduct[][] = []
@@ -41,7 +44,7 @@ function Catalog (): JSX.Element {
     return result
   }
 
-  async function getProducts (): Promise<IProduct[][] | undefined> {
+  async function getProducts (): Promise<IProduct[][]> {
     try {
       const response = await api.get('/products')
 
@@ -60,21 +63,9 @@ function Catalog (): JSX.Element {
       }
     } catch (error) {
       console.error('An error occour during on try to get products')
+      return [[]]
     }
   }
-
-  useEffect(() => {
-    async function getShelfProducts (): Promise<void> {
-      try {
-        const shelf: IProduct[][] | undefined = await getProducts()
-        setProducts(shelf as IProduct[][])
-      } catch (error) {
-        console.log('An error occour during to try get shelf products')
-      }
-    }
-
-    void getShelfProducts()
-  }, [device])
 
   return (
     <>
@@ -85,7 +76,7 @@ function Catalog (): JSX.Element {
       <Header />
       <Breadcrumbs />
       <Banner />
-      <Shelf data={products} />
+      <Shelf data={data ?? [[]]} />
     </>
   )
 }

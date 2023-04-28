@@ -1,6 +1,8 @@
 import React from 'react'
 
+import { getPrice } from 'utils/getPrice'
 import { type IProduct } from 'models/Shelf'
+
 import { Category, Container, Name, Page, Photo, Price, Product } from './styles'
 
 interface IProps {
@@ -8,14 +10,9 @@ interface IProps {
 }
 
 function Shelf ({ data }: IProps): JSX.Element {
-  function getPrice (value: number): string {
-    const [integer, decimals] = value.toFixed(2).split('.')
-    return `R$ ${integer},${decimals}`
-  }
-
   function renderProduct (product: IProduct): JSX.Element {
     return (
-      <Product to="/catalog/clothes" data-testid="product" key={product.id}>
+      <Product to={`/product/${product.id}`} data-testid="product" key={product.id}>
         <Photo src={product.image} alt={product.title} />
         <Category>{product.category}</Category>
         <Name>{product.title}</Name>
