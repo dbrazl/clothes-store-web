@@ -5,11 +5,7 @@ import { useQuery } from 'react-query'
 import { Device, useDevice } from 'hooks/useDevice'
 import api from 'services/api'
 
-import TopBar from 'components/TopBar'
-import Header from 'components/Header'
-import Breadcrumbs from 'components/Breadcrumbs'
-import Banner from 'components/Banner'
-import Shelf from 'components/Shelf'
+import { TopBar, Header, Breadcrumbs, Banner, Shelf } from 'components'
 
 import { type IProduct } from 'models/Shelf'
 
