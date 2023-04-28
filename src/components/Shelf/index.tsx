@@ -15,7 +15,7 @@ function Shelf ({ data }: IProps): JSX.Element {
 
   function renderProduct (product: IProduct): JSX.Element {
     return (
-      <Product to="/catalog/clothes">
+      <Product to="/catalog/clothes" data-testid="product" key={product.id}>
         <Photo src={product.image} alt={product.title} />
         <Category>{product.category}</Category>
         <Name>{product.title}</Name>
@@ -24,16 +24,16 @@ function Shelf ({ data }: IProps): JSX.Element {
     )
   }
 
-  function renderPage (products: IProduct[]): JSX.Element {
+  function renderPage (products: IProduct[], page: number): JSX.Element {
     return (
-      <Page>
+      <Page key={page}>
         {products.map(renderProduct)}
       </Page>
     )
   }
 
   return (
-    <Container>
+    <Container data-testid="shelf">
       {data.map(renderPage)}
     </Container>
   )
