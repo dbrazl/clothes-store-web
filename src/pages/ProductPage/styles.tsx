@@ -36,7 +36,7 @@ export const ProductInfo = styled.div`
 
 export const Category = styled.span`
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #808080;
