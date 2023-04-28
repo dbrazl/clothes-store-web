@@ -24,8 +24,12 @@ export const Breadcrumb = styled(Link)`
   & + & {
     ::before {
       content: '>';
-      margin: 0 20px;
+      margin: 0 10px;
       cursor: auto;
+
+      @media (min-width: 768px) {
+        margin: 0 20px;
+      }
     }
   }
 `
