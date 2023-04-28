@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import TopBar from 'components/TopBar'
 import Header from 'components/Header'
 import Breadcrumbs from 'components/Breadcrumbs'
+import Banner from 'components/Banner'
 
 // import { Container } from './styles'
 
@@ -16,6 +17,7 @@ function Catalog (): JSX.Element {
       <TopBar />
       <Header />
       <Breadcrumbs />
+      <Banner />
     </>
   )
 }
