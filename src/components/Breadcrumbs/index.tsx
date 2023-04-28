@@ -2,13 +2,17 @@ import React from 'react'
 
 import { Breadcrumb, Container } from './styles'
 
-function Breadcrumbs (): JSX.Element {
+interface IBreadcrumbs {
+  children: JSX.Element | JSX.Element[]
+}
+
+function Breadcrumbs ({ children }: IBreadcrumbs): JSX.Element {
   return (
     <Container data-testid="breadcrumbs">
-      <Breadcrumb to="/" data-testid="breadcrumb">HOME</Breadcrumb>
-      <Breadcrumb to="/catalog/clothes" data-testid="breadcrumb">ROUPAS</Breadcrumb>
+      {children}
     </Container>
   )
 }
 
+export { Breadcrumb }
 export default Breadcrumbs

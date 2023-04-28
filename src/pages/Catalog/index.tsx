@@ -5,7 +5,7 @@ import { useQuery } from 'react-query'
 import { Device, useDevice } from 'hooks/useDevice'
 import api from 'services/api'
 
-import { TopBar, Header, Breadcrumbs, Banner, Shelf } from 'components'
+import { TopBar, Header, Breadcrumbs, Banner, Shelf, Breadcrumb } from 'components'
 
 import { type IProduct } from 'models/Shelf'
 
@@ -70,7 +70,10 @@ function Catalog (): JSX.Element {
       </Helmet>
       <TopBar />
       <Header />
-      <Breadcrumbs />
+      <Breadcrumbs>
+        <Breadcrumb to="/" data-testid="breadcrumb">HOME</Breadcrumb>
+        <Breadcrumb to="/catalog/clothes" data-testid="breadcrumb">ROUPAS</Breadcrumb>
+      </Breadcrumbs>
       <Banner />
       <Shelf data={data ?? [[]]} />
     </>

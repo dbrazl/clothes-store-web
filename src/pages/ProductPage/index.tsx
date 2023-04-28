@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 import api from 'services/api'
 import { getPrice } from 'utils/getPrice'
 
-import { Header, TopBar, Button } from 'components'
+import { Header, TopBar, Button, Breadcrumbs, Breadcrumb } from 'components'
 
 import { type IProduct } from 'models/Shelf'
 
@@ -36,6 +36,11 @@ function ProductPage (): JSX.Element {
       </Helmet>
       <TopBar />
       <Header />
+      <Breadcrumbs>
+        <Breadcrumb to="/" data-testid="breadcrumb">HOME</Breadcrumb>
+        <Breadcrumb to="/catalog/clothes" data-testid="breadcrumb">ROUPAS</Breadcrumb>
+        <Breadcrumb to={`/product/${id ?? 0}`} data-testid="breadcrumb">PRODUTO</Breadcrumb>
+      </Breadcrumbs>
       <Container>
         <Photo src={data?.image} alt={data?.title} />
         <ProductInfo>
