@@ -2,6 +2,12 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Header from '.'
 
+test('should render header', () => {
+  render(<Header />)
+  const header = screen.getByTestId('header')
+  expect(header).toBeInTheDocument()
+})
+
 test('should have a logo', () => {
   render(<Header />)
   const topBar = screen.getByTestId('logo')
