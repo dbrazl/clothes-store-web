@@ -2,12 +2,14 @@ import React from 'react'
 import { CgMenuRight } from 'react-icons/cg'
 
 import { logo } from 'assets/images'
-import { Categories, Category, Container, Logo, SandwichButton } from './styles'
+import { Categories, Category, Container, Logo, LogoLink, SandwichButton } from './styles'
 
 function Header (): JSX.Element {
   return (
     <Container data-testid="header">
-      <Logo src={logo} data-testid="logo" />
+      <LogoLink to="/">
+        <Logo src={logo} data-testid="logo" />
+      </LogoLink>
 
       <Categories data-testid="categories-nav">
         <Category to="">Novidades</Category>

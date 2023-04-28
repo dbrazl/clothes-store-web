@@ -16,6 +16,12 @@ export const Container = styled.div`
   }
 `
 
+export const LogoLink = styled(Link)`
+  width: min-content;
+  height: 72px;
+  padding: 20px 0;
+`
+
 export const Logo = styled.img`
   width: auto;
   height: 100%;
