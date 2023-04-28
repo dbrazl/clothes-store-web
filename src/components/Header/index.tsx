@@ -10,13 +10,13 @@ function Header (): JSX.Element {
       <Logo src={logo} data-testid="logo" />
 
       <Categories data-testid="categories-nav">
-        <Category>Novidades</Category>
-        <Category>Roupas</Category>
-        <Category>Calçados</Category>
-        <Category>Acessórios</Category>
-        <Category>Parcerias</Category>
-        <Category>Linhas</Category>
-        <Category highlight>Bazar até 50%</Category>
+        <Category to="">Novidades</Category>
+        <Category to="/catalog/clothes">Roupas</Category>
+        <Category to="">Calçados</Category>
+        <Category to="">Acessórios</Category>
+        <Category to="">Parcerias</Category>
+        <Category to="">Linhas</Category>
+        <Category to="" highlight>Bazar até 50%</Category>
       </Categories>
 
       <SandwichButton data-testid="mobile-menu-button">

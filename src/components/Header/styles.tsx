@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.div`
   height: 72px;
@@ -35,11 +36,12 @@ interface CategoryProp {
   highlight?: boolean
 }
 
-export const Category = styled.a<CategoryProp>`
+export const Category = styled(Link)<CategoryProp>`
   font-size: 12px;
   color: black;
   text-transform: uppercase;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
 
   ${({ highlight }) =>
