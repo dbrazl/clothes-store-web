@@ -1,5 +1,6 @@
 import {
-  Home
+  Home,
+  Catalog
 } from 'pages'
 
 import { publicRoute } from './RouteTypes'
@@ -10,6 +11,11 @@ const publicRoutes = (): JSX.Element[] => {
       key: 'Home',
       path: '/',
       element: Home
+    }),
+    publicRoute({
+      key: 'Catalog - Clothes',
+      path: '/catalog/clothes',
+      element: Catalog
     })
   ]
 }
