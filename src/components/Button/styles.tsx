@@ -5,4 +5,5 @@ export const Container = styled.button`
   height: 50px;
   color: white;
   background-color: black;
+  text-transform: uppercase;
 `
