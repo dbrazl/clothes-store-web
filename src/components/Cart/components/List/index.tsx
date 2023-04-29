@@ -12,7 +12,7 @@ function List ({ data }: IList): JSX.Element {
   function renderProduct (product: ICartProduct): JSX.Element {
     return (
       <Product key={product.id} data-testid="product">
-        <Image src={product.image} />
+        <Image src={product.image} data-testid="product-image" />
         <Info>
           <Name>{product.title}</Name>
         </Info>

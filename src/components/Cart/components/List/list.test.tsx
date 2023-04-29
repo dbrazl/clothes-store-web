@@ -35,8 +35,14 @@ test('should product have name', () => {
   expect(component).toBeInTheDocument()
 })
 
-test('should product have name', () => {
+test('should product have a name', () => {
   render(<List data={[product]} />)
   const component = screen.getByText('Product name')
   expect(component).toBeInTheDocument()
+})
+
+test('should product have an image', () => {
+  render(<List data={[product]} />)
+  const image = screen.getByTestId('product-image')
+  expect(image).toBeInTheDocument()
 })
