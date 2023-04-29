@@ -36,4 +36,5 @@ export const Button = styled.button`
   background-color: black;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
 `
