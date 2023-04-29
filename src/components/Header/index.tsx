@@ -1,8 +1,9 @@
 import React from 'react'
 import { CgMenuRight } from 'react-icons/cg'
+import { FiShoppingBag } from 'react-icons/fi'
 
 import { logo } from 'assets/images'
-import { Categories, Category, Container, Logo, LogoLink, SandwichButton } from './styles'
+import { Categories, Category, Container, Logo, LogoLink, Button, ButtonsWrapper } from './styles'
 
 function Header (): JSX.Element {
   return (
@@ -21,9 +22,14 @@ function Header (): JSX.Element {
         <Category to="" highlight>Bazar até 50%</Category>
       </Categories>
 
-      <SandwichButton data-testid="mobile-menu-button">
-        <CgMenuRight size={25} color='black' />
-      </SandwichButton>
+      <ButtonsWrapper>
+        <Button data-testid="mobile-menu-button">
+          <FiShoppingBag size={25} color='black' />
+        </Button>
+        <Button hiddenOnWeb data-testid="mobile-menu-button">
+          <CgMenuRight size={25} color='black' />
+        </Button>
+      </ButtonsWrapper>
     </Container>
   )
 }

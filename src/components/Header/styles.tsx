@@ -61,7 +61,20 @@ export const Category = styled(Link)<CategoryProp>`
   }
 `
 
-export const SandwichButton = styled.button`
+export const ButtonsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media (min-width: 1024px) {
+    margin-left: auto;
+  }
+`
+
+interface IButton {
+  hiddenOnWeb?: boolean
+}
+
+export const Button = styled.button<IButton>`
   width: 50px;
   height: 100%;
   display: flex;
@@ -72,6 +85,9 @@ export const SandwichButton = styled.button`
   cursor: pointer;
 
   @media (min-width: 1024px) {
-    display: none;
+    ${({ hiddenOnWeb }) =>
+      hiddenOnWeb && css`
+        display: none;
+    `}
   }
 `
