@@ -6,4 +6,5 @@ export const Container = styled.button`
   color: white;
   background-color: black;
   text-transform: uppercase;
+  cursor: pointer;
 `
