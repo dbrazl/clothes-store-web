@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 import api from 'services/api'
 import { getPrice } from 'utils/getPrice'
 
-import { Header, TopBar, Button, Breadcrumbs, Breadcrumb } from 'components'
+import { Header, TopBar, Button, Breadcrumbs, Breadcrumb, Freight } from 'components'
 
 import { type IProduct } from 'models/Shelf'
 
@@ -48,6 +48,7 @@ function ProductPage (): JSX.Element {
           <ProductName>{data?.title}</ProductName>
           <Price>{getPrice(data?.price ?? 0)}</Price>
           <Button>Adicionar ao carrinho</Button>
+          <Freight />
         </ProductInfo>
       </Container>
     </>
