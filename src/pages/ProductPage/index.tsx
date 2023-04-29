@@ -42,11 +42,11 @@ function ProductPage (): JSX.Element {
         <Breadcrumb to={`/product/${id ?? 0}`} data-testid="breadcrumb">PRODUTO</Breadcrumb>
       </Breadcrumbs>
       <Container>
-        <Photo src={data?.image} alt={data?.title} />
+        <Photo src={data?.image} alt={data?.title} data-testid="photo" />
         <ProductInfo>
-          <Category>{data?.category}</Category>
-          <ProductName>{data?.title}</ProductName>
-          <Price>{getPrice(data?.price ?? 0)}</Price>
+          <Category data-testid="category">{data?.category}</Category>
+          <ProductName data-testid="product-name">{data?.title}</ProductName>
+          <Price data-testid="price">{getPrice(data?.price ?? 0)}</Price>
           <Button>Adicionar ao carrinho</Button>
           <Freight />
         </ProductInfo>
