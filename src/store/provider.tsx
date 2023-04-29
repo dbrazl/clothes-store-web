@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AuthProvider } from './states'
+import { AuthProvider, CartProvider } from './states'
 
 interface ProviderType {
   children: React.ReactElement | React.ReactElement[]
@@ -9,7 +9,9 @@ interface ProviderType {
 function Provider ({ children }: ProviderType): JSX.Element {
   return (
     <AuthProvider>
-      {children}
+      <CartProvider>
+        {children}
+      </CartProvider>
     </AuthProvider>
   )
 }

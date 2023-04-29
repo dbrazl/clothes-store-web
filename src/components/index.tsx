@@ -6,5 +6,6 @@ import Header from './Header'
 import Shelf from './Shelf'
 import TopBar from './TopBar'
 import Freight from './Freight'
+import Cart from './Cart'
 
-export { Banner, Breadcrumbs, Breadcrumb, Button, Carousel, Header, Shelf, TopBar, Freight }
+export { Banner, Breadcrumbs, Breadcrumb, Button, Carousel, Header, Shelf, TopBar, Freight, Cart }

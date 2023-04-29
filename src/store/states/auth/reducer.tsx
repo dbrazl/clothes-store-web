@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { saveAuthetification, removeAuthetification } from 'services/sessionStorage'
 
-import { Actions } from './@types/actions'
+import { type Action, Actions } from './@types/actions'
 import { type State } from './@types'
 
-function authReducer (state: any, action: any): State {
+function authReducer (state: State, action: Action): State {
   const signed: State = {
     auth: {
       signed: true

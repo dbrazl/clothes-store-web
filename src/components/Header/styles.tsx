@@ -39,7 +39,7 @@ export const Categories = styled.nav`
 `
 
 interface CategoryProp {
-  highlight?: boolean
+  highlight?: number
 }
 
 export const Category = styled(Link)<CategoryProp>`
