@@ -11,7 +11,7 @@ interface IList {
 function List ({ data }: IList): JSX.Element {
   function renderProduct (product: ICartProduct): JSX.Element {
     return (
-      <Product>
+      <Product key={product.id} data-testid="product">
         <Image src={product.image} />
         <Info>
           <Name>{product.title}</Name>
@@ -21,7 +21,7 @@ function List ({ data }: IList): JSX.Element {
   }
 
   return (
-    <Container>
+    <Container data-testid="list">
       {data.map(renderProduct)}
     </Container>
   )
