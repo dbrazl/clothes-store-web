@@ -4,6 +4,7 @@ import { IoMdClose } from 'react-icons/io'
 import { CartContext } from 'store/states/cart/state'
 import { Actions } from 'store/states/cart/@types/actions'
 
+import Freight from 'components/Freight'
 import { Empty, List } from './components'
 import { CloseButton, Container, Title } from './styles'
 
@@ -25,6 +26,9 @@ function Cart (): JSX.Element {
       {state.cart.products.length <= 0
         ? <Empty />
         : <List data={state.cart.products} />}
+      {state.cart.products.length > 0
+        ? <Freight />
+        : null}
     </Container>
   )
 }
