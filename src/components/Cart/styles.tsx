@@ -18,6 +18,7 @@ export const Container = styled.div<IContainer>`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 20px;
 
   @media (min-width: 1024px) {
     width: 40%;
@@ -44,5 +45,5 @@ export const Title = styled.h2`
   font-size: 28px;
   font-weight: bold;
   color: black;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `
