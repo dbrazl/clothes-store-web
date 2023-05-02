@@ -16,3 +16,13 @@ export interface IProduct {
 export interface ICartProduct extends IProduct {
   quantity: number
 }
+
+export interface IPayamentProduct {
+  title: string
+  quantity: number
+  unit_price: number
+}
+
+export interface ICreatePreference {
+  items: IPayamentProduct[]
+}
